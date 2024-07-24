@@ -33,6 +33,12 @@ function renderClientList(data) {
             allowedIpsHtml += `<small class="badge badge-secondary">${obj}</small>&nbsp;`;
         })
 
+        // render static route list
+        let staticRoutesHtml = "";
+        $.each(obj.Client.extra_allowed_ips, function(index, obj) {
+            staticRoutesHtml += `<small class="badge badge-secondary">${obj}</small>&nbsp;`;
+        })
+
         let subnetRangesString = "";
         if (obj.Client.subnet_ranges && obj.Client.subnet_ranges.length > 0) {
             subnetRangesString = obj.Client.subnet_ranges.join(',')
@@ -98,8 +104,10 @@ function renderClientList(data) {
                                     ${obj.Client.additional_notes}</span>
                                 <span class="info-box-text"><strong>IP Allocation</strong></span>`
                                 + allocatedIpsHtml
-                                + `<span class="info-box-text"><strong>Allowed IPs</strong></span>`
+                                + `<span class="info-box-text"><strong>Allowed IPs - Client Side</strong></span>`
                                 + allowedIpsHtml
+                                + `<span class="info-box-text"><strong>Static Routes</strong></span>`
+                                + staticRoutesHtml
                             +`</div>
                         </div>
                     </div>`
