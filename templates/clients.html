@@ -140,11 +140,21 @@ Wireguard Clients
                         <input type="text" data-role="tagsinput" class="form-control" id="_client_allocated_ips">
                     </div>
                     <div class="form-group">
-                        <label for="_client_allowed_ips" class="control-label">Allowed IPs</label>
+                        <label for="_client_allowed_ips" class="control-label">Allowed IPs - Client Side
+                            <i class="fas fa-info-circle" data-toggle="tooltip"
+                                       data-original-title="Specify a list of addresses that will get routed to the
+                                       server. These addresses will be included in 'AllowedIPs' of client config">
+                                    </i>
+                        </label>
                         <input type="text" data-role="tagsinput" class="form-control" id="_client_allowed_ips">
                     </div>
                     <div class="form-group">
-                        <label for="_client_extra_allowed_ips" class="control-label">Extra Allowed IPs</label>
+                        <label for="_client_extra_allowed_ips" class="control-label">Static Routes
+                            <i class="fas fa-info-circle" data-toggle="tooltip"
+                                       data-original-title="Specify a list of addresses that will get routed to this
+                                       client. These addresses will be included in 'AllowedIPs' of WG server config">
+                                    </i>
+                        </label>
                         <input type="text" data-role="tagsinput" class="form-control"
                                id="_client_extra_allowed_ips">
                     </div>
