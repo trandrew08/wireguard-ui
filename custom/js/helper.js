@@ -107,7 +107,7 @@ function renderClientList(data) {
                                 + `<span class="info-box-text"><strong>Allowed IPs - Client Side</strong></span>`
                                 + allowedIpsHtml
                                 + `<span class="info-box-text"><strong>Static Routes</strong></span>`
-                                + staticRoutesHtml
+                                + `${staticRoutesHtml || `N/A`}`
                             +`</div>
                         </div>
                     </div>`
